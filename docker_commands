@@ -1,0 +1,38 @@
+## Docker commands used to build the application 
+docker build . -t techtrends
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# Get the container id
+docker ps
+
+# Get app logs
+docker logs 3facc917ae76
+
+## Logs from the container running the TechTrends application
+* Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:24] "GET / HTTP/1.1" 200 -
+INFO:app:16-08-2021, 18:34:26, Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:26] "GET /1 HTTP/1.1" 200 -
+INFO:app:16-08-2021, 18:34:31, Article "Kubernetes v1.20 Release Notes" retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:31] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:31] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:16-08-2021, 18:34:33, The "About Us" page is retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:33] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:33] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:35] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:36] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:16-08-2021, 18:34:40, A new article "teste" is created!
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:40] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:40] "GET / HTTP/1.1" 200 -
+INFO:app:16-08-2021, 18:34:46, Article "teste" retrieved!
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:46] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:46] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:47] "GET / HTTP/1.1" 200 -
