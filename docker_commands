@@ -9,7 +9,7 @@ docker run -d -p 7111:3111 techtrends
 docker ps
 
 # Get app logs
-docker logs 3facc917ae76
+docker logs 458a3218f1bf
 
 ## Logs from the container running the TechTrends application
 * Serving Flask app "app" (lazy loading)
@@ -18,21 +18,33 @@ docker logs 3facc917ae76
    Use a production WSGI server instead.
  * Debug mode: off
 INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:24] "GET / HTTP/1.1" 200 -
-INFO:app:16-08-2021, 18:34:26, Article "2020 CNCF Annual Report" retrieved!
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:26] "GET /1 HTTP/1.1" 200 -
-INFO:app:16-08-2021, 18:34:31, Article "Kubernetes v1.20 Release Notes" retrieved!
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:31] "GET /3 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:31] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:app:16-08-2021, 18:34:33, The "About Us" page is retrieved!
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:33] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:33] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:35] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:36] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:app:16-08-2021, 18:34:40, A new article "teste" is created!
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:40] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:40] "GET / HTTP/1.1" 200 -
-INFO:app:16-08-2021, 18:34:46, Article "teste" retrieved!
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:46] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:46] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:werkzeug:172.17.0.1 - - [16/Aug/2021 18:34:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:13:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:13:53] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:13:53] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:22-08-2021, 14:13:58, Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:13:58] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:13:58] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:00] "GET / HTTP/1.1" 200 -
+INFO:app:22-08-2021, 14:14:01, Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:01] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:01] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:02] "GET / HTTP/1.1" 200 -
+INFO:app:22-08-2021, 14:14:04, Article "Kubernetes v1.20 Release Notes" retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:04] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:04] "GET /favicon.ico HTTP/1.1" 404 -
+ERROR:app:22-08-2021, 14:14:08, A non-existing article is accessed and a 404 page is returned!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:08] "GET /3000 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:08] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:12] "GET / HTTP/1.1" 200 -
+INFO:app:22-08-2021, 14:14:13, The "About Us" page is retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:13] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:13] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:16] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:16] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:22-08-2021, 14:14:22, A new article "Teste" is created!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:22] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:22] "GET / HTTP/1.1" 200 -
+INFO:app:22-08-2021, 14:14:24, Article "Teste" retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:24] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:24] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [22/Aug/2021 14:14:25] "GET / HTTP/1.1" 200 -

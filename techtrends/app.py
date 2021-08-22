@@ -38,12 +38,17 @@ def get_posts():
     connection.close()
     return posts
 
-# Function to logging messages
+# Functions to logging messages
 
 
 def logger_msg(message):
     time = datetime.now().strftime('%d-%m-%Y, %H:%M:%S')
     return app.logger.info('%(time)s, %(message)s' % {"time": time, "message": message})
+
+
+def logger_error_msg(message):
+    time = datetime.now().strftime('%d-%m-%Y, %H:%M:%S')
+    return app.logger.error('%(time)s, %(message)s' % {"time": time, "message": message})
 
 
 # Define the Flask application
@@ -66,7 +71,7 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        logger_msg(
+        logger_error_msg(
             'A non-existing article is accessed and a 404 page is returned!')
         return render_template('404.html'), 404
     else:
